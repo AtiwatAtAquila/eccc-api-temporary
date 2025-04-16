@@ -42,7 +42,7 @@ Thumbs.db
 venv/
 !certs/
 !tmp/
-.env
+!.env
 
 # Large media files
 *.mp4
