@@ -1,0 +1,1 @@
+alter system set timezone = 'Asia/Bangkok';

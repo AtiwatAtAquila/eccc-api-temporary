@@ -1,0 +1,32 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  default:
+    format: "%(asctime)s %(levelname)s %(funcName)s (%(lineno)d) %(message)s"
+
+handlers:
+  default:
+    class: logging.StreamHandler
+    formatter: default
+    stream: ext://sys.stdout
+
+loggers:
+  uvicorn:
+    level: INFO
+    handlers: [default]
+    propagate: no
+
+  app:
+    level: DEBUG
+    handlers: [default]
+    propagate: no
+
+  sqlalchemy.engine.Engine:
+    level: WARNING
+    handlers: [default]
+    propagate: no
+
+root:
+  level: WARNING
+  handlers: [default]
